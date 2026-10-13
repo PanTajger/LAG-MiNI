@@ -131,19 +131,32 @@ using $i^2=-1$.
 \end{example}
 
 \begin{fact}[Inversion]
-For any complex number $a+bi$ we have $(a+bi)(a-bi)=a^2+b^2$. Consequently, if $z=a+bi\neq 0$, then its
-multiplicative inverse is
+Let $z=a+bi\neq 0$ and put
 \[
-\frac{1}{z}=\frac{1}{a+bi} = \frac{a}{a^2+b^2}-\frac{b}{a^2+b^2}\,i.
+\frac{1}{z} = \frac{a}{a^2+b^2}-\frac{b}{a^2+b^2}\,i.
 \]
+Then $z\cdot\frac1z = 1$, i.e.\ $\frac1z$ is a multiplicative inverse of $z$.
 \end{fact}
 
 \begin{proof}
-Multiplying numerator and denominator by the conjugate $a-bi$,
+Since $z\neq 0$, at least one of the real numbers $a,b$ is non-zero, so $a^2+b^2>0$ and the real numbers
+$\frac{a}{a^2+b^2}$ and $\frac{b}{a^2+b^2}$ are well defined. By the definition of multiplication,
 \[
-\frac{1}{a+bi} =\frac{a-bi}{(a+bi)(a-bi)} = \frac{a-bi}{a^2+b^2}. \qedhere
+(a+bi)\left(\frac{a}{a^2+b^2}-\frac{b}{a^2+b^2}\,i\right)
+= \frac{a^2+b^2}{a^2+b^2} + \frac{-ab+ba}{a^2+b^2}\,i = 1+0i = 1. \qedhere
 \]
 \end{proof}
+
+\begin{remark}
+Where does the formula come from? The key observation is that $(a+bi)(a-bi)=a^2+b^2$ is a non-zero
+\emph{real} number. So, informally, if we pretend that fractions of complex numbers behave like fractions of
+real numbers, we may multiply the numerator and denominator of $\frac{1}{a+bi}$ by the conjugate $a-bi$:
+\[
+\frac{1}{a+bi} =\frac{a-bi}{(a+bi)(a-bi)} = \frac{a-bi}{a^2+b^2}.
+\]
+This is not a proof, since it uses division by complex numbers before we know it makes sense; but it is a
+convenient way to \emph{find} the inverse, and the fact above confirms that the result is correct.
+\end{remark}
 
 \begin{example}
 \[
