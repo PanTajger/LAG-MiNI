@@ -211,24 +211,10 @@ every non-zero element has an inverse.
 $\Z_n$, with addition and multiplication modulo $n$, is a field if and only if $n$ is a prime number.
 \end{theorem}
 
-\begin{proof}
-Suppose first that $n$ is composite, say $n = a\cdot b$ with $1<a,b<n$. Then $a\cdot_n b = 0$ although
-$a\neq 0$ and $b\neq 0$, so $\Z_n$ has zero divisors and cannot be a field.
-
-Conversely, let $n=p$ be prime and take any $a\in\{1,\ldots,p-1\}$; we must produce an inverse of $a$.
-Consider the $p-1$ products
-\[
-a\cdot_p 1,\quad a\cdot_p 2,\quad \ldots,\quad a\cdot_p (p-1).
-\]
-None of them equals $0$, since a product of two integers not divisible by the prime $p$ is not divisible by
-$p$. Moreover no two of them are equal: $a\cdot_p x = a\cdot_p y$ means that $p$ divides $a(x-y)$, hence
-$p$ divides $x-y$, hence $x=y$. So the $p-1$ products are distinct elements of $\{1,\ldots,p-1\}$ — and
-therefore run through \emph{all} of $\{1,\ldots,p-1\}$. In particular $a\cdot_p x = 1$ for some $x$, which
-is the required inverse.
-\end{proof}
+\noindent The proof is left to the reader as an exercise.
 
 \begin{remark}
-The proof is non-constructive: it shows an inverse exists without saying how to find it efficiently. In
+The theorem only says that inverses exist; it does not say how to find them efficiently. In
 practice inverses modulo $p$ are computed with the \emph{extended Euclidean algorithm} — a staple of every
 cryptographic library.
 \end{remark}
